@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class CameraActivity extends Activity {
+public class CustomCameraActivity extends Activity {
   public static  int MEDIA_TYPE_IMAGE = 1;
   public static final int MEDIA_TYPE_VIDEO = 2;
   public static final String TAG="scoutbuzz";
@@ -92,7 +92,7 @@ public class CameraActivity extends Activity {
 
     mCamera = getCameraInstance();
     // Create our Preview view and set it as the content of our activity.
-    mPreview = new CameraPreview(this, mCamera);
+    mPreview = new CustomCameraPreview(this, mCamera);
     FrameLayout preview = (FrameLayout) findViewById(R.id.camera_preview);
     preview.addView(mPreview);
 

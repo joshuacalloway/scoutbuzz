@@ -13,7 +13,7 @@
             </intent-filter>
         </activity>
 
-	<activity class=".CameraActivity" android:name="CameraActivity">
+	<activity class=".CustomCameraActivity" android:name="CustomCameraActivity">
           <intent-filter>
             <action android:name="com.scoutbuzz.action.SHOOT_VIDEO" />
             <category android:name="android.intent.category.DEFAULT" />
@@ -25,40 +25,20 @@
 	<activity class=".StockCameraActivity" android:name="StockCameraActivity">
         </activity>
 
-        <activity class="com.google.ytd.SettingActivity" android:theme="@style/YtdTheme" android:name="com.google.ytd.SettingActivity"
-                  android:label="@string/app_name" android:configChanges="orientation|keyboardHidden">
-        </activity>
-        <activity class="com.google.ytd.SubmitActivity" android:theme="@style/YtdTheme" android:name="com.google.ytd.SubmitActivity"
-                  android:configChanges="orientation|keyboardHidden"/>
-        <activity class="com.google.ytd.MainActivity" android:theme="@style/YtdTheme" android:name="com.google.ytd.MainActivity">
-        </activity>
-        <activity class="com.google.ytd.DetailsActivity" android:theme="@style/YtdTheme" android:name="com.google.ytd.DetailsActivity"/>
-        <activity android:theme="@style/YtdTheme" android:name="com.google.ytd.SubmitActivity"
-                  android:configChanges="orientation|keyboardHidden"/>
-        <service class="com.google.ytd.AssignmentSyncService" android:name="com.google.ytd.AssignmentSyncService"
-                 android:exported="true"/>
-        <receiver class="com.google.ytd.AlarmActionReceiver" android:name="com.google.ytd.AlarmActionReceiver">
-            <intent-filter>
-                <action android:name="com.google.ytd.ALARM_ACTION"></action>
-            </intent-filter>
-        </receiver>
     </application>
 
-
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"></uses-permission>
-    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"></uses-permission>
-    <uses-permission android:name="android.permission.USE_CREDENTIALS"></uses-permission>
+    <uses-feature android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH"/>
     <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.youtube"/>
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" />
     <uses-sdk android:minSdkVersion="14"/>
 </manifest>

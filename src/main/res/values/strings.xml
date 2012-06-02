@@ -1,12 +1,3 @@
 <resources>
-    <string name="app_name">scoutbuzz v0.01</string>
-
-    <string name="intro_msg">Please configure your news source and account information.</string>
-    <string name="domain_prompt">Choose a news source</string>
-    <string name="yt_account_prompt">Choose your Google/YouTube account</string>
-    <string name="dev_key">AI39si51a9D4sNYT0wfZ-V3zCSFoGX9ROVBV6XLW3YdUsR6_xt-OwLuY6dREjTJ56c5fomMayJb145ESAYEtUDBs6Vi4o77PJg</string>
-    <string name="client_id">joshua.calloway</string>
-    <string name="default_ytd_domain">scoutbuzz1.appspot.com</string>
-    <string name="default_ytd_domain_name">TODO-name - e.g. San Francisco Bay Area</string>
-
+    <string name="app_name">scoutbuzz v1.01</string>
 </resources>

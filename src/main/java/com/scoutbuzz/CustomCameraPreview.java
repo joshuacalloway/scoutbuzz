@@ -2,38 +2,31 @@ package com.scoutbuzz;
 
 
 import android.app.Activity;
-import android.os.Bundle;
-import android.widget.TextView;
-import android.util.Log;
-import android.view.SurfaceView;
-import android.view.View;
-import android.media.MediaRecorder;
-import android.hardware.Camera;
-import android.widget.Button;
-import android.media.MediaRecorder;
-import android.media.MediaRecorder;
-import android.media.CamcorderProfile;
-import java.io.File;
-import android.util.Log;
-import android.net.Uri;
-import android.os.Environment;
+import android.content.Context;
 import android.content.Intent;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.io.IOException;
-import android.widget.FrameLayout;
+import android.hardware.Camera;
+import android.media.CamcorderProfile;
+import android.net.Uri;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceHolder;
-import android.content.Context;
+import android.view.SurfaceView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /** A basic Camera preview class */
 // copied from http://developer.android.com/guide/topics/media/camera.html#capture-video
-public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
+public class CustomCameraPreview extends SurfaceView implements SurfaceHolder.Callback {
   private final static String TAG="scoutbuzz";
     private SurfaceHolder mHolder;
     private Camera mCamera;
 
-    public CameraPreview(Context context, Camera camera) {
+    public CustomCameraPreview(Context context, Camera camera) {
         super(context);
         mCamera = camera;
 
