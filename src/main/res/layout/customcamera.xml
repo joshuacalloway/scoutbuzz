@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  
+  <FrameLayout
+      android:id="@+id/camera_preview"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_weight="1"
+      />
+
+  <LinearLayout
+      android:layout_marginBottom="20dip"
+      android:layout_gravity="center_horizontal|bottom"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="12dip">
+    <Button
+	android:id="@+id/button_capture"
+	android:layout_height="wrap_content"
+	android:layout_width="wrap_content"
+	android:text="Capture"
+	android:padding="12dip"
+	android:background="#AA000000"
+	android:textColor="#ffffffff"
+	android:onClick="selfDestruct" />
+
+    <Button
+	android:id="@+id/button_buzz"
+	android:layout_height="wrap_content"
+	android:layout_width="wrap_content"
+	android:text="Buzz"
+	android:background="#AA000000"
+	android:textColor="#ffffffff"
+	android:onClick="selfDestruct" />
+    <Button
+	android:id="@+id/button_profile"
+	android:layout_height="wrap_content"
+	android:layout_width="wrap_content"
+	android:text="Profile"
+	android:background="#AA000000"
+	android:textColor="#ffffffff"
+	android:onClick="selfDestruct" />
+    <Button
+	android:id="@+id/button_stats"
+	android:layout_height="wrap_content"
+	android:layout_width="wrap_content"
+	android:text="Stats"
+	android:background="#AA000000"
+	android:textColor="#ffffffff"
+	android:onClick="selfDestruct" />
+  </LinearLayout>
+</merge>
+

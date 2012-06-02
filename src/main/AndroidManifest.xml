@@ -1,0 +1,64 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.scoutbuzz">
+
+    <application
+        android:icon="@drawable/android:star_big_on"
+        android:label="@string/app_name"
+        android:debuggable="true">
+
+        <activity android:label="@string/app_name" android:name="MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+	<activity class=".CameraActivity" android:name="CameraActivity">
+          <intent-filter>
+            <action android:name="com.scoutbuzz.action.SHOOT_VIDEO" />
+            <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter>
+        </activity>
+
+	<activity class=".UploadYoutubeActivity" android:name="UploadYoutubeActivity">
+        </activity>
+	<activity class=".StockCameraActivity" android:name="StockCameraActivity">
+        </activity>
+
+        <activity class="com.google.ytd.SettingActivity" android:theme="@style/YtdTheme" android:name="com.google.ytd.SettingActivity"
+                  android:label="@string/app_name" android:configChanges="orientation|keyboardHidden">
+        </activity>
+        <activity class="com.google.ytd.SubmitActivity" android:theme="@style/YtdTheme" android:name="com.google.ytd.SubmitActivity"
+                  android:configChanges="orientation|keyboardHidden"/>
+        <activity class="com.google.ytd.MainActivity" android:theme="@style/YtdTheme" android:name="com.google.ytd.MainActivity">
+        </activity>
+        <activity class="com.google.ytd.DetailsActivity" android:theme="@style/YtdTheme" android:name="com.google.ytd.DetailsActivity"/>
+        <activity android:theme="@style/YtdTheme" android:name="com.google.ytd.SubmitActivity"
+                  android:configChanges="orientation|keyboardHidden"/>
+        <service class="com.google.ytd.AssignmentSyncService" android:name="com.google.ytd.AssignmentSyncService"
+                 android:exported="true"/>
+        <receiver class="com.google.ytd.AlarmActionReceiver" android:name="com.google.ytd.AlarmActionReceiver">
+            <intent-filter>
+                <action android:name="com.google.ytd.ALARM_ACTION"></action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"></uses-permission>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"></uses-permission>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.youtube"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-sdk android:minSdkVersion="14"/>
+</manifest>
